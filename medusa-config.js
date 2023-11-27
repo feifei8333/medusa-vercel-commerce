@@ -30,19 +30,19 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:3000";
 
 const DATABASE_TYPE = process.env.DATABASE_TYPE || "postgres";
 const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/vercel-commerce";
- const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
-     {
-       resolve: "@medusajs/admin",
-       /** @type {import('@medusajs/admin').PluginOptions} */
-       options: {
-         autoRebuild: true,
-       },
-     },
+  // {
+  //   resolve: "@medusajs/admin",
+  //   /** @type {import('@medusajs/admin').PluginOptions} */
+  //   options: {
+  //     autoRebuild: true,
+  //   },
+  // },
 ];
 
 const modules = {
